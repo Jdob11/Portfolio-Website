@@ -1,0 +1,360 @@
+:root {
+    --primary-color: #0f1111;
+    --secondary-color: #e47a17;
+    --tertiary-color: #df0fcd;
+    --clear: #ffffff00;
+    --text-color: #79797c;
+    --portfolio-color: #515152;
+    --shadow: #00000050;
+    --button-text-color: #ffffff;
+    --font-weight-heading: 600;
+    --font-weight-standard:400;
+    --portfolio-text: #ffffff;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: var(--font-weight-standard);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*Links*/
+
+a {
+    color: var(--secondary-color);
+}
+
+a:visited {
+    color: var(--tertiary-color);
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--secondary-color);
+}
+
+
+
+
+/*Header*/
+
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, var(--clear),var(--secondary-color),var(--tertiary-color),var(--clear));
+    border-image-slice: 1;
+}
+
+.page-header__item {
+    flex: 0 1 100px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+    justify-content: center;
+}
+
+.page-header__item:first-child {
+    width: 175px;
+    border-radius: 5%;
+}
+
+.navigation-list,
+.about-list,
+.contact-list {
+    padding: 0%;
+    list-style-type: none;
+}
+
+.contact-list {
+    padding-left: none;
+    margin-left: 250px;
+    width: 400px;
+    text-align: left;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.navigation-list__item--active {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/*Headings*/
+
+h1 {
+    font-size: 30px;
+    font-weight: var(--font-weight-heading);
+    color: var(--secondary-color);
+}      
+
+#contact, 
+#contact-submit {
+    margin-left: 250px;
+    width: auto;
+    text-align: left;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: var(--font-weight-heading);
+    color: var(--tertiary-color);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: var(--font-weight-heading);
+}
+
+p {
+    color: var(--text-color);
+}
+
+li {
+    color: var(--text-color);
+}
+
+form {
+    color: var(--text-color);
+}
+
+address {
+    color: var(--text-color);
+    margin: 40px;  
+    margin-left: 250px;
+    width: 250px;
+    text-align: left; 
+}
+
+label {
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+
+input {
+  float: left;
+}
+
+/*Buttons*/
+
+button,
+.button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: var(--tertiary-color);
+    color: var(--button-text-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid var(--shadow);
+    transition: 0.5s opacity;
+}
+
+  button:hover, 
+  button:focus,
+  .button:hover,
+  .button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.button__secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+.about {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-list {
+    text-align: left;
+}
+
+.about-svg {
+    display: block;
+    padding-top: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.profile__picture {
+    float: right;
+    width: 250px;
+    margin: 0 40px;
+    border-radius: 50%;
+}
+
+
+.page-footer {
+    clear:both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 100px;
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, var(--clear),var(--secondary-color),var(--tertiary-color),var(--clear));
+    border-image-slice: 1;
+}
+
+.page-footer__item {
+    width: 75px;
+    height: auto;
+    margin: 10px;
+}
+
+.portfolio-list__item {
+    display: inline-block;
+    width: 33%;
+   }
+
+.portfolio-list__text {
+    color: var(--portfolio-text)
+}
+
+@supports (display: grid) {
+.portfolio-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 20px;
+}
+
+.portfolio-list__item {
+    background-color: var(--portfolio-color);
+    width: auto;
+    min-height: auto;
+    padding: 20px;
+    color: var(--button-text-color)
+}
+
+.portfolio-list__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+}
+}
+
+@media all and (max-width: 500px) {
+    .portfolio-list {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .portfolio-list {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .portfolio-list__item:last-child {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    h1 {
+        font-size: 22px;
+    }    
+}
+
+@keyframes color-change {
+    0% {
+      fill: var(--secondary-color);
+    }
+    50% {
+      fill: var(--tertiary-color);
+    }
+    100% {
+      fill: var(--primary-color);
+    }
+  }
+
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+    from {
+      transform: translate(0, 0px);
+    }
+    to {
+      transform: translate(200px, 0px);
+    }
+}
+
+@keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 20px);
+    }
+    to {
+      transform: translate(100px, 20px);
+    }
+}
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* trying to add brackets to nav list
+.brackets a:before, .brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 35px;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+.brackets a:before
+{
+    content: '(';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+.brackets a:after
+{
+    content: ')';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+.brackets a:hover:before, .brackets a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+*/
+
