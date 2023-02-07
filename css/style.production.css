@@ -245,9 +245,9 @@ button {
     text-align: center;
     margin: 100px;
     border-top: 2px solid transparent;
-    -o-border-image: -o-linear-gradient(left, #ffffff00,#e47a17,#df0fcd,#ffffff00);
-       border-image: -webkit-gradient(linear, left top, right top, from(#ffffff00),color-stop(#e47a17),color-stop(#df0fcd),to(#ffffff00));
-       border-image: linear-gradient(0.25turn, #ffffff00,#e47a17,#df0fcd,#ffffff00);
+    -o-border-image: -o-linear-gradient(left, #ffffff00,#df0fcd,#e47a17,#ffffff00);
+       border-image: -webkit-gradient(linear, left top, right top, from(#ffffff00),color-stop(#df0fcd),color-stop(#e47a17),to(#ffffff00));
+       border-image: linear-gradient(0.25turn, #ffffff00,#df0fcd,#e47a17,#ffffff00);
     border-image-slice: 1;
 }
 
@@ -263,8 +263,8 @@ button {
    }
 
 .portfolio-list__text {
-    color: #ffffff;
-    }
+    color: #ffffff
+}
 
 @supports (display: grid) {
 .portfolio-list {
@@ -281,6 +281,7 @@ button {
     width: auto;
     min-height: auto;
     padding: 20px;
+    color: #ffffff
 }
 
 .portfolio-list__item:last-child {
