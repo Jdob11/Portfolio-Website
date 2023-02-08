@@ -105,7 +105,7 @@ h1 {
     font-size: 30px;
     font-weight: 600;
     color: #e47a17;
-}      
+}   
 
 #contact, 
 #contact-submit {
@@ -220,18 +220,38 @@ button {
 }
 
 .profile {
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     max-width: 700px;
-    margin: 0 auto;
+    margin: auto;
     text-align: right;
+}
+  
+.left {
+-webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+}
+
+.right {
+-webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
 }
 
 .profile__picture {
     float: right;
     width: 250px;
-    margin: 0 40px;
+    margin-top: 20px;
     border-radius: 50%;
 }
-
 
 .page-footer {
     clear:both;
@@ -299,6 +319,7 @@ button {
         grid-template-columns: 1fr;
         grid-gap: 10px;
     }
+    
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {

@@ -101,7 +101,7 @@ h1 {
     font-size: 30px;
     font-weight: var(--font-weight-heading);
     color: var(--secondary-color);
-}      
+}   
 
 #contact, 
 #contact-submit {
@@ -198,20 +198,31 @@ button,
     margin: 0 auto;
     text-align: center;
 }
-/*
+
 .profile {
+    clear: both;
+    display: flex;
+    width: 50%;
+    flex-direction: row;
     max-width: 700px;
-    margin: 0 auto;
+    margin: auto;
     text-align: right;
 }
-*/
+  
+.left {
+flex: 1;
+}
+
+.right {
+flex: 1;
+}
+
 .profile__picture {
     float: right;
     width: 250px;
-    margin: 0 40px;
+    margin-top: 20px;
     border-radius: 50%;
 }
-
 
 .page-footer {
     clear:both;
@@ -266,6 +277,7 @@ button,
         grid-template-columns: 1fr;
         grid-gap: 10px;
     }
+    
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
