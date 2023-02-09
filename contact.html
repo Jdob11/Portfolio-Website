@@ -34,7 +34,9 @@
     </header>
 
     <main>
-        <div>
+
+        <div class="contact-page">
+            <div>
             <a href="mailto:jbdobson11@gmail.com?subject=Hi%20There%20Jeff!">
                 <h1 id="contact">Contact Me</h1>
             </a>
@@ -43,13 +45,13 @@
         <div>
             <form action="" method="post">
                 <label class="standard-input" for="contact-email">E-mail:  </label>
-                <input type="email" style="margin-left: 10px" id="contact-email" required><br>
+                <input type="email" style="margin-left: 30px" id="contact-email" required><br>
             
                 <label class="standard-input" for="contact-tel">Telephone:  </label>
-                <input type="tel" style="margin-left: 10px" id="contact-tel" value="###-###-####" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br>
+                <input type="tel" id="contact-tel" value="###-###-####" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br>
             
                 <label class="standard-input" for="user-message">Message:  </label>
-                <textarea maxlength="240" style="margin-left: 10px" id="user-message" required></textarea><br>
+                <textarea maxlength="240" id="user-message" required></textarea><br>
                 <br>
                 <button type="button" id="contact-submit" value="Data">Submit</button><br>
                 <br>
@@ -57,12 +59,12 @@
         </div>
         
         <div>
-            <address>
-                Jeff Dobson<br>
-                2711 Street Road<br>
-                Citytown, BC, V1V 1V1<br>
-                Canada<br>
-            </address>
+            <ul class="address">
+                <li>Jeff Dobson</li>
+                <li>2711 Street Road</li>
+                <li>Citytown, BC, V1V 1V1</li>
+                <li>Canada</li>
+            </ul>
             <br>
             <ul class="contact-list">
                 <li class="contact-list__item">Phone: <a href="tel:+12345678910">+1(234)567-8910</a></li><br>
@@ -71,7 +73,9 @@
                 <li class="conact-list__item">GitHub: <a href="https://github.com/Jdob11" target="_blank">Jdob11</a></li>
             </ul>
         </div>
+    </div>
     </main>
+
     <footer class="page-footer">
         <p>Check me out on:</p>
         <div class="social-media">
