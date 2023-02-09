@@ -77,18 +77,19 @@ a:active {
 
 .navigation-list,
 .about-list,
-.contact-list {
+.contact-list,
+.address {
     padding: 0%;
     list-style-type: none;
 }
-
+/*
 .contact-list {
     padding-left: none;
     margin-left: 250px;
     width: 400px;
     text-align: left;
 }
-
+*/
 .navigation-list li {
     display: inline-block;
     margin-left: 15px;
@@ -106,14 +107,14 @@ h1 {
     font-weight: 600;
     color: #e47a17;
 }   
-
+/*
 #contact, 
 #contact-submit {
     margin-left: 250px;
     width: auto;
     text-align: left;
 }
-
+*/
 h2 {
     font-size: 24px;
     font-weight: 600;
@@ -143,19 +144,21 @@ address {
     margin-left: 250px;
     width: 250px;
     text-align: left; 
+    padding: 0;
 }
-
+/*
 label {
     float: left;
     clear: left;
     width: 250px;
-    text-align: right;
+    text-align: center;
 }
 
-input {
+input,
+textarea {
   float: left;
 }
-
+*/
 /*Buttons*/
 
 button {
@@ -209,6 +212,7 @@ button {
 
 .about-list {
     text-align: left;
+    margin: 20px;
 }
 
 .about-svg {
@@ -219,12 +223,27 @@ button {
     text-align: center;
 }
 
+.contact-page {
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    max-width: 700px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
 .profile {
     clear: both;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 50%;
+    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -251,6 +270,9 @@ button {
     width: 250px;
     margin-top: 20px;
     border-radius: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 250px;
+            flex: 0 1 250px;
 }
 
 .page-footer {
@@ -313,13 +335,34 @@ button {
 }
 }
 
+@media only screen and (max-width: 1050px) {
+    .profile {
+      -webkit-box-orient:vertical;
+      -webkit-box-direction:reverse;
+          -ms-flex-direction:column-reverse;
+              flex-direction:column-reverse;
+    }
+    .profile__picture {
+        float: none;
+    }    
+    .left {
+        width: 100%;
+        text-align: center;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    }
+    .right {
+        text-align: center;
+    }
+
+  }
+
 @media all and (max-width: 500px) {
     .portfolio-list {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-gap: 10px;
     }
-    
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
@@ -337,6 +380,9 @@ button {
     }
     h1 {
         font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
     }    
 }
 
