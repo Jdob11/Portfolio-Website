@@ -246,7 +246,7 @@ flex: 1;
     text-align: center;
     margin: 100px;
     border-top: 2px solid transparent;
-    border-image: linear-gradient(0.25turn, var(--clear),var(--secondary-color),var(--tertiary-color),var(--clear));
+    border-image: linear-gradient(0.25turn, var(--clear),var(--tertiary-color),var(--secondary-color),var(--clear));
     border-image-slice: 1;
 }
 
